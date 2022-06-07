@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static '/css/main.css' %}"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Team Thor</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <a class="navbar-brand" href="./index.html">
+        <span class="brand-name">Dashboard</span>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="./deals.html"
+              ><span class="brand-name">Deals</span>
+              <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./inventory.html"
+              ><span class="brand-name">Inventory</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <span class="brand-name">Customer</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Contacts </a>
+              <a class="dropdown-item" href="#">Company </a>
+              <a class="dropdown-item" href="./contactsCenterPage.html"
+                >Contact Center</a
+              >
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <span class="brand-name">Sales</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Invoice </a>
+              <a class="dropdown-item" href="#">Quotes </a>
+              <a class="dropdown-item" href="#">Sales Center</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <span class="brand-name">Analytics</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Sales Funnel </a>
+              <a class="dropdown-item" href="#">Employee Performance</a>
+              <a class="dropdown-item" href="#">Call Analytics</a>
+              <a class="dropdown-item" href="#">Conversation Analytics</a>
+              <a class="dropdown-item" href="#">Sales Intelligence</a>
+              <a class="dropdown-item" href="#">Report Vizard</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <span class="brand-name">Settings</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">CRM Settings</a>
+              <a class="dropdown-item" href="#">My Company Details</a>
+              <a class="dropdown-item" href="#">Access Permissions</a>
+              <a class="dropdown-item" href="#">CRM Payments</a>
+              <a class="dropdown-item" href="#">Smart Process Automation</a>
+            </div>
+          </li>
+          <li>
+            <a href="./login.html" class="btn btn-danger my-2 my-sm-0"
+              >logout</a
+            >
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+    <div class="row">
+        <div style="margin-top: 2em">
+          <h5 style="text-align:center">Inventory</h5>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <div class="card" style="border-radius: 15px 50px 30px;">
+            <div class="card-body">
+              <h5 class="card-title">Total Products from our company</h5>
+              <br>
+              <div class="contact-icon">
+                  <i class="fa fa-address-book-o" style="font-size:36px"></i>
+              </div>
+              <br>
+              <div id="counter">
+  
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <div class="card" style="border-radius: 15px 50px 30px;">
+              <div class="card-body" onclick="functionclick()">
+                  <h5 class="card-title">Total Revenue made</h5>
+                  <br>
+                  
+                  <div class="contact-icon">
+                      <i class="fa fa-dollar" style="font-size:36px"></i>
+                  </div>
+                  <br>
+                  <h4>124 lakhs</h4>
+                  
+              </div>
+              </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+              <div class="card" style="border-radius: 15px 50px 30px;">
+                  <div class="card-body">
+                    <h5 class="card-title">No of customers approached us</h5>
+                    <br>
+                    <div class="contact-icon">
+                      <i class="material-icons" style="font-size:36px">email</i>
+                  </div>
+                  <br>
+                  <h5>165</h5>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        
+        function functionclick(){
+          alert("something")
+        }
+      </script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"
+      integrity="sha512-FJ2OYvUIXUqCcPf1stu+oTBlhn54W0UisZB/TNrZaVMHHhYvLBV9jMbvJYtvDe5x/WVaoXZ6KB+Uqe5hT2vlyA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/chart1.js"></script>
+    <script src="./js/chart2.js"></script>
+    <script src="./js/chart3.js"></script>
+    <script src="./js/chart4.js"></script>
+    <script src="./js/showActivities.js"></script>
+  </body>
+</html>
